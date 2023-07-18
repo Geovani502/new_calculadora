@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="x-ico" href="../recursos/icono.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Calculadora avanzada</title>
+  </head>
+
+  <body>
+    <button id="before_pag" class="btn btn-custom">
+      <i class="bi bi-calculator-fill"></i> calculadora basica
+
+    </button>
+
+    <button id="themeButton" class="btn btn-custom">
+      <i class="bi bi-sun-fill"></i>
+    </button>
+    
+    <main class="cont-general min-flex">
+      <div class="sub-general container">
+        <!-- HEADER -->
+        <div class="row bg-transparent min-flex text-dark">
+          <div class="header text-center">
+            <h1>Calculadora avanzada</h1>
+          </div>
+        </div>
+
+        <!-- CALCULADORA -->
+        <div class="row bg-transparent min-flex">
+          <div class="calculadora container col-8 bg-warning border p-2 m-3">
+            <div class="row cont-display min-flex">
+              <div class="display text-white bg-dark w-75 my-3">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+              </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="row min-flex">
+              <button
+                class="btn btn-secondary col-2"
+                onclick="deleteAll()"
+              >
+                C
+              </button>
+              <button
+                class="btn btn-secondary col-2"
+                onclick="deleteValue()"
+              >
+                &larr;
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('^')"
+              >
+                ^
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('sqrt')"
+              >
+                √x
+              </button>
+            </div>
+            <div class="row min-flex">
+              <button class="btn btn-light col-2 numero" onclick="addNumber(7)">
+                7
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(8)">
+                8
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(9)">
+                9
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('%')"
+              >
+                %
+              </button>
+            </div>
+            <div class="row min-flex">
+              <button class="btn btn-light col-2 numero" onclick="addNumber(6)">
+                6
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(5)">
+                5
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(4)">
+                4
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('*')"
+              >
+                x
+              </button>
+            </div>
+            <div class="row min-flex">
+              <button class="btn btn-light col-2 numero" onclick="addNumber(3)">
+                3
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(2)">
+                2
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addNumber(1)">
+                1
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('-')"
+              >
+                -
+              </button>
+            </div>
+            <div class="row min-flex">
+              <button class="btn btn-light col-2 numero" onclick="addNumber(0)">
+                0
+              </button>
+              <button class="btn btn-light col-2 numero" onclick="addDecimal()">
+                .
+              </button>
+              <button
+                class="btn btn-light col-2 operador"
+                onclick="calculate()"
+              >
+                =
+              </button>
+              <button
+                class="btn btn-dark col-2 operador"
+                onclick="operate('+')"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="op_avanzadas.js"></script>
+  </body>
+</html>
